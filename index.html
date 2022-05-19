@@ -3,18 +3,39 @@
     .site {
       border-style: solid;
       border-color: black;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: auto 1fr 3fr;
     }
     .masthead {
+      background-color: beige;
+      text-align: center;
+    }
+    .page-title {
+      background-color: pink;
+      text-align: center;
+    }
+    .main-content {
+      background-color: lightblue;
+      text-align: center;
+    }
+    .sidebar {
+      background-color: lightgreen;
+      text-align: center;
+    }
+    .footer {
+      background-color: lightgrey;
+      text-align: center;
     }
   </style>
   <title>CSS practise</title>
   <body>
     <div class="site">
-      <header class="masthead"></header>
-      <h1 class="page-title"></h1>
-      <main class="main-content"></main>
-      <aside class="sidebar"></aside>
-      <footer class="footer"></footer>
+      <header class="masthead">masthead</header>
+      <h1 class="page-title">title</h1>
+      <main class="main-content">main-content</main>
+      <aside class="sidebar">sidebar</aside>
+      <footer class="footer">footer</footer>
     </div>
   </body>
 </html>
