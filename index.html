@@ -3,9 +3,6 @@
     .site {
       border-style: solid;
       border-color: black;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      grid-template-rows: auto 1fr 3fr;
     }
     .masthead {
       background-color: beige;
@@ -13,18 +10,21 @@
       grid-column: 2/4;
       grid-row: 2/3;
       min-height: 80px;
+      grid-area: header;
     }
     .page-title {
       background-color: pink;
       text-align: center;
       grid-column: 1/4;
       grid-row: 1/2;
+      grid-area: title;
     }
     .main-content {
       background-color: lightblue;
       text-align: center;
       grid-column: 1/2;
       grid-row: 2/4;
+      grid-area: main;
     }
     .sidebar {
       background-color: lightgreen;
@@ -33,6 +33,27 @@
     .footer {
       background-color: lightgrey;
       text-align: center;
+    }
+    @media screen and (min-width: 55em) {
+      .site {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr 3fr;
+        grid-template-areas:
+          "title title"
+          "main header"
+          "main sidebar";
+      }
+    }
+    @media screen and (min-width: 74em) {
+      .site {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-areas:
+          "title title title"
+          "main header header"
+          "main sidebar footer";
+      }
     }
   </style>
   <title>CSS practise</title>
